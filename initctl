@@ -1,0 +1,13 @@
+#!/bin/sh
+
+COM=${1:-"default"}
+INI=${2:-"default"}
+
+if [ $COM == "list" ] || [ $COM == "stop" ]; then
+  # s_crsutils.pm will only try to stop the "running" procs, so just return an empty list
+  exit 0
+elif [ $COM == "start" ]; then
+  if [ $INI == "oracle-ohasd" ]; then
+    exec /etc/init.d/init.ohasd run >/dev/null 2>&1 &
+  fi
+fi
