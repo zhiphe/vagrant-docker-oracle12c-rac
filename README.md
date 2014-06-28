@@ -14,14 +14,14 @@ as of 6/28/2014
 ## Setup
 
 * node (Docker Host)
-  * Oracle Linux 6.5 (converted from CentOS6.5)
+  * Oracle Linux 6.5
   * oracle-rdbms-server-12cR1-preinstall
   * Unbreakable Enterprise Kernel R3
   * Memory: 4GB
-  * Root Disk: 40GB
+  * Root Disk: 50GB
   * External Disk: /dev/sdb(ASM) 10GB, /dev/sdc(/opt1) 15GB, /dev/sdd(/opt2) 15GB
 * node1, node2 (Container)
-  * Oracle Linux 6.5 (converted from CentOS6.5)
+  * Oracle Linux 6.5
   * oracle-rdbms-server-12cR1-preinstall
 
 ```
@@ -85,7 +85,7 @@ go to Linux x86-64 -> "See All"
   * linuxamd64_12c_grid_1of2.zip
   * linuxamd64_12c_grid_2of2.zip
 
-Boot and reload to use the UEK kernel.  This might take a long time.
+Boot and reload.  This might take a long time.
 
 ```
 $ vagrant up
