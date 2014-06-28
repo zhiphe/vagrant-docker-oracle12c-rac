@@ -22,7 +22,7 @@ echo "/dev/sdc1  /opt1  ext4  defaults  0  0" >> /etc/fstab
 echo "/dev/sdd1  /opt2  ext4  defaults  0  0" >> /etc/fstab
 mount -a
 
-# install Docker, replace with the latest binary, disable selinux
+# install Docker, replace with the latest binary
 rpm -iUvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum install -y docker-io
 curl -O --location https://get.docker.io/builds/Linux/x86_64/docker-latest
