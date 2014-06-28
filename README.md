@@ -107,7 +107,7 @@ Several docker-unique setup:
 (if behind a proxy)
 [root@node ~]# service docker stop
 [root@node ~]# HTTP_PROXY=proxy:port HTTPS_PROXY=proxy:port docker -d >/dev/null 2>&1 &
-[root@node ~]# docker run -e http_proxy=proxy:port -e https_proxy=proxy:port --privileged -t -i -v /vagrant:/vagrant yasushiyy/oraclelinux65 /bin/sh /vagrant/setup_d.sh
+[root@node ~]# docker run -e http_proxy=proxy:port -e https_proxy=proxy:port --privileged -t -i -v /vagrant:/vagrant yasushiyy/oraclelinux65 /bin/sh /vagrant/setup_container.sh
 
 [root@node ~]# docker run --privileged -t -i -v /vagrant:/vagrant yasushiyy/oraclelinux65 /bin/sh /vagrant/setup_container.sh
 [root@node ~]# docker commit `docker ps -a | grep oraclelinux65 | head -1 | awk '{print $1}'` ol65
